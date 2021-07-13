@@ -1,5 +1,14 @@
 # cheatsh!t
 
+# Android
+
+**adb command**
+
+- start server over tcpip `*adb tcpip <port> (5555)*`
+- conenct device   `*adb connect <device_ip>:5555*`
+- check devices connect ` *adb devices*`
+- check log  `adb logcat | grep -i <context1>|\<context2>*`
+
 # python
 **Virtual Env**
 
