@@ -679,23 +679,6 @@ If you are using *Markdown2* with the `wiki-tables` extra activated you should s
 ||   1910 ||                 -15 ||                   30 ||  
 ||   1920 ||                 -10 ||                   32 ||  
 
-
-### Definition Lists
-
-This example requires *Python Markdown*'s `def_list` extension.
-
-Apple
-:   Pomaceous fruit of plants of the genus Malus in 
-    the family Rosaceae.
-
-Orange
-:   The fruit of an evergreen tree of the genus Citrus.
-
-
-## About
-
-This plugin and this sample file is proudly brought to you by the [revolunet team][revolunet]
-
  [ref1]: http://revolunet.com
  [ref2]: http://revolunet.com "rich web apps"
  [MarkdownREF]: http://daringfireball.net/projects/markdown/basics
