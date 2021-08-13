@@ -82,6 +82,13 @@ class USER(Model):
 18
 >>> female_user.sex
 AttributeError: 'USER' object has no attribute 'sex'
+>>> sex = {
+    'sex': 'female',
+    'status': 'married'
+}
+>>> female_user.sex = sex
+>>> female_user.sex
+{'sex': 'female', 'status': 'married'}
 ```
 
 - Unpacking Elements
