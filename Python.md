@@ -31,6 +31,59 @@ jupyter notebook
 | Paste Cell | v               | Paste Key      |
 
 ## Common
+- Create obj
+```python
+
+class Model(object):
+
+    def __init__(self, data):
+        for key, value in data.items():
+            self.__setattr__(key, value)
+
+class USER(Model):
+
+    def __init__(self, data=None):
+        attrs = {
+            'id': None,
+            'email': None,
+            'name': None,
+            'address': None,
+            'phone': None
+        }
+
+        if data:
+            attrs = dict((k, data.get(k, attrs[k])) for (k,v) in attrs.items())
+        super(USER, self).__init__(attrs)
+>>> data = {
+            'id': 1,
+            'email': 'test@email.com',
+            'name': 'User',
+            'address': 'test address',
+            'phone': '0909090909'
+            }
+>>> user = USER(data)
+>>> user.id
+1
+>>> user.email
+'test@email.com'
+>>> user.phone
+'0909090909'
+```
+
+- Adding new attribute for obj
+```python
+>>> male_user = USER()
+>>> male_user.sex = 'Male'
+>>> male_user.sex 
+'Male'
+>>> female_user = USER()
+>>> female_user.age =  18
+>>> female_user.age
+18
+>>> female_user.sex
+AttributeError: 'USER' object has no attribute 'sex'
+```
+
 - Unpacking Elements
 ```python
 >>> record = ('Dave', 'dave@example.com', '773-555-1212', '847-555-1212')
