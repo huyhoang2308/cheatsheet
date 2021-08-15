@@ -21,8 +21,8 @@ Insert `[ TOC ]` without spaces to generate a table of contents (builtin parsers
 > ### Smaller title (h3)
 > #### and so on (hX)
 > ##### and so on (hX)
-> ###### and so on (hX)
-
+> ###### and so on (hX
+)
 ## Example lists (1)
 
  - bullets can be `-`, `+`, or `*`
@@ -67,6 +67,52 @@ Also, any indented block is considered a code block.  If `enable_highlight` is `
     <script>
         document.location = 'http://lmgtfy.com/?q=markdown+cheat+sheet';
     </script>
+
+
+## Code support
+| Language |     Available language mode(s)
+| ---- | ----------------- |
+|ASP.NET | asp, aspx |
+|C  | c |
+|C++ | c++, cpp, cplusplus |
+|C# | cs, csharp |
+|Clojure | clj, cljc, cljx, clojure |
+|CSS | css, less, sass, scss, styl, stylus|
+|cURL |   curl|
+|D  | d|
+|Dart  |  dart|
+|Diff  |  diff|
+|Docker|  dockerfile |
+|Erlang | erl, erlang |
+|Go | go |
+|Groovy | gradle, groovy |
+|Handlebars | handlebars, hbs |
+|HTML/XML   | html, xhtml, xml |
+|HTTP  |  http |
+|Java   | java |
+|JavaScript | coffeescript, ecmascript, javascript, js, jsx, node |
+|JSON |   json |
+|Julia  | jl, julia |
+|Kotlin | kotlin, kt |
+|Liquid  |liquid |
+|Markdown |   markdown |
+|Objective-C | objc, objectivec |
+|Objective-C++ |   objc++, objcpp, objectivecpp, objectivecplusplus |
+|OCaml  | ocaml, ml |
+|Perl   | perl, pl |
+|PHP | php |
+|PowerShell | powershell, ps1 |
+|Python | py, python |
+|R  | r |
+|React |  jsx |
+|Ruby  |  jruby, macruby, rake, rb, rbx, ruby |
+|Rust  |  rs, rust |
+|Scala |  scala |
+|Shell |  bash, sh, shell, zsh |
+|SQL | cql, mssql, mysql, plsql, postgres, postgresql, pgsql, sql, sqlite |
+|Swift |  swift |
+|TypeScript | ts, typescript |
+|YAML  |  yaml, yml |
 
 ## Math
 

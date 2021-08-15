@@ -1,13 +1,13 @@
 # Python
 ## Virtual Env
-
-```
+- Create new virtual environment
+```python
 python -m venv /path/to/your/dir
 ```
 
 ## Jupyter Notebook
 - Setup Jupyter Lab
-```bash
+```python
 pip install jupyterlab
 ```
 
@@ -17,7 +17,7 @@ pip install notebook
 ```
 
 - Start Jupyter
-```python
+```bash
 jupyter notebook
 ```
 
@@ -31,6 +31,20 @@ jupyter notebook
 | Paste Cell | v               | Paste Key      |
 
 ## Common
+
+- String
+```python
+>>> incoming = 'arbit'
+>>> result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
+>>> result
+'arbit hello world arbit hello world arbit'
+
+>>> result = '{0} hello world {0} hello world {1}'format(incoming, 'hello')
+>>> result
+'arbit hello world arbit hello world hello'
+
+```
+
 - Create obj
 ```python
 
