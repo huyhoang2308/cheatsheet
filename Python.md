@@ -34,19 +34,30 @@ jupyter notebook
 
 - String
 ```python
->>> incoming = 'arbit'
->>> result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
+incoming = 'arbit'
+result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
+
 >>> result
 'arbit hello world arbit hello world arbit'
 
+
+
 >>> result = '{0} hello world {0} hello world {1}'format(incoming, 'hello')
+
 >>> result
 'arbit hello world arbit hello world hello'
+
+>>> result = 'hello {0}, i am {1} nice to meet {0}, {1} look good!'.format('Android', 'Iphone')
+>>> result
+'hello Android, i am Iphone nice to meet Android, Iphone look good!'
 
 ```
 
 - Create obj
 ```python
+"""
+Python 2
+"""
 
 class Model(object):
 
@@ -82,6 +93,27 @@ class USER(Model):
 'test@email.com'
 >>> user.phone
 '0909090909'
+```
+
+```python
+"""
+python 3
+"""
+class USER:
+    'id'= 1,
+    'email' = 'test@email.com',
+    'name' = 'User',
+    'address' =  'test address',
+    'phone' = '0909090909'
+
+>>> user = USER(data)
+>>> user.id
+1
+>>> user.email
+'test@email.com'
+>>> user.phone
+'0909090909'
+
 ```
 
 - Adding new attribute for obj
@@ -231,6 +263,17 @@ d['b'].add(4)
 defaultdict(set, {'a': {1, 2}, 'b': {4}})
 ```
 
+- Convert json to object
+```python
+import json
+from types import SimpleNamespace
+
+>>> data = '{"name": "John Smith", "hometown": {"name": "New York", "id": 123}}'
+>>> x = json.loads(data, object_hook=lambda d: SimpleNamespace(**d))
+>>> print(x.name, x.hometown.name, x.hometown.id)
+"John Smith" "New York" 123
+
+```
 
 ## Logging
 ```python
