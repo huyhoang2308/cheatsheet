@@ -27,31 +27,11 @@ jupyter notebook
 | -------- | ----------------- | ----------------|  
 | Run Cell | Ctrl + Enter      | Cell → Run Cell |  
 | Create new cell | above: Esc + a, Below: Esc + b | Insert→ Insert Cell Above OR Insert → Insert Cell Below |
+| Delete Cell | D + D          | Edit -> Delete Cell      |
 | Copy Cell | c                | Copy Key        |
 | Paste Cell | v               | Paste Key      |
 
 ## Common
-
-- String
-```python
-incoming = 'arbit'
-result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
-
->>> result
-'arbit hello world arbit hello world arbit'
-
-
-
->>> result = '{0} hello world {0} hello world {1}'format(incoming, 'hello')
-
->>> result
-'arbit hello world arbit hello world hello'
-
->>> result = 'hello {0}, i am {1} nice to meet {0}, {1} look good!'.format('Android', 'Iphone')
->>> result
-'hello Android, i am Iphone nice to meet Android, Iphone look good!'
-
-```
 
 - Create obj
 ```python
@@ -138,6 +118,34 @@ AttributeError: 'USER' object has no attribute 'sex'
 ```
 
 ## String and Elementss
+
+- String
+```python
+incoming = 'arbit'
+result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
+
+>>> result
+'arbit hello world arbit hello world arbit'
+
+
+
+>>> result = '{0} hello world {0} hello world {1}'format(incoming, 'hello')
+
+>>> result
+'arbit hello world arbit hello world hello'
+
+>>> result = 'hello {0}, i am {1} nice to meet {0}, {1} look good!'.format('Android', 'Iphone')
+>>> result
+'hello Android, i am Iphone nice to meet Android, Iphone look good!'
+
+>>> string = 'hello abc!   I am  def'
+
+>>> string.replace(' ', '')
+'helloabc!Iamdef'
+
+>>> string.replace('hello', 'hello world!')
+'hello world! abc!   I am  def'
+```
 
 - Unpacking Elements
 ```python
@@ -244,6 +252,32 @@ Item('spam')
 Item('foo')
 >>> q.pop()
 Item('grok')
+```
+
+- Adding and Remove key/value from dictionary
+```python
+d = {'a': 'abc',
+    'b': 'def',
+    'c': 123}
+
+>>> d['a'] = 'hello'
+>>> d
+{'a': 'hello',
+'b': 'def',
+'c': 123}
+
+>>> d['d'] = '456'
+>>> d
+{'a': 'hello',
+'b': 'def',
+'c': 123,
+'d': 456}
+
+>>> d.pop('a', None)
+>>> d
+{'b': 'def',
+'c': 123,
+'d': 456}
 ```
 
 - Mapping Keys to Multiple Values in a Dictionary
