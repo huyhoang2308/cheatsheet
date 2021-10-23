@@ -139,11 +139,12 @@ result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
 'hello Android, i am Iphone nice to meet Android, Iphone look good!'
 
 >>> string = 'hello abc!   I am  def'
->>> string.trim(' ')
+
+>>> string.replace(' ', '')
 'helloabc!Iamdef'
 
->>> string.trim('hello')
-'abc!   I am  def'
+>>> string.replace('hello', 'hello world!')
+'hello world! abc!   I am  def'
 ```
 
 - Unpacking Elements
@@ -251,6 +252,32 @@ Item('spam')
 Item('foo')
 >>> q.pop()
 Item('grok')
+```
+
+- Adding and Remove key/value from dictionary
+```python
+d = {'a': 'abc',
+    'b': 'def',
+    'c': 123}
+
+>>> d['a'] = 'hello'
+>>> d
+{'a': 'hello',
+'b': 'def',
+'c': 123}
+
+>>> d['d'] = '456'
+>>> d
+{'a': 'hello',
+'b': 'def',
+'c': 123,
+'d': 456}
+
+>>> d.pop('a', None)
+>>> d
+{'b': 'def',
+'c': 123,
+'d': 456}
 ```
 
 - Mapping Keys to Multiple Values in a Dictionary
