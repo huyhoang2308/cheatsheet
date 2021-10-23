@@ -17,3 +17,4 @@ Log.w(); // Warning
 Log.e(); // Error
 
 ```
+- Install file to emulator `adb install <app name.apk>`
