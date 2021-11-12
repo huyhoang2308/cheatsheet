@@ -674,6 +674,35 @@ class Date:
 
 ```
 
+## System and OS 
+
+* Create folder
+```python
+
+>>> import os 
+>>> f_name = 'hello'
+
+>>> current_path = os.getcwd() # get script's location
+
+>>> current_path
+'/home/dale/desktop'
+
+>>> os.mkdir(os.path.join(current_path,f_name), '0o666')
+'/home/dale/desktop/hello'
+```
+
+* Check if folder existed
+```python
+>>> from os import path
+
+>>> path.exists('/home/dale/desktop/hello')
+True
+
+>>> path.exists('/home/dale/desktop/hello/world')
+False
+```
+
+
 ## Logging
 ```python
 import logging
