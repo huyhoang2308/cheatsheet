@@ -636,6 +636,9 @@ datetime.datetime(2012, 9, 23, 21, 37, 4, 177393)
 >>> print(later)
 2013-03-10 03:15:00-05:00
 
+
+>>>start_date = date(date.today().year, 1, 1)
+>>>end_date = date(date.today().year, 12, 31)
 ```
 
 * Customizing String Formatting
