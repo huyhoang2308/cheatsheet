@@ -47,10 +47,20 @@ $ echo ${#var}
 ```
 
 ## System
-- datetime
+- datetime and format 
 ```bash
 $ date
 Sun Oct 31 20:47:17 +07 2021
+
+$ date +"%m-%d-%y"
+10-30-21
+
+$ date +"%Y-%m-%d"
+2021-12-28
+
+# Get last day of preioius month 
+$ date -d "$(date +%Y-%m-01) -1 day" +%d-%b-%Y
+30-Nov-2021
 ```
 
 
