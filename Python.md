@@ -686,3 +686,11 @@ loggin.basicConfig(format=log_format, level=logging.DEBUG) #INFO
 import pandas
 pandas.options.mode.chained_assignment = None  # default='warn', igonre warning
 ```
+
+## Path
+```python 
+    import os 
+    os.removedirs(os.path.join(path, f)) # remove folder 
+    os.remove(file)  # remove file 
+
+```

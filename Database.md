@@ -367,3 +367,12 @@ SUM #returns the total of a list
 MAX #returns the maximum value in a list
 MIN #returns the minimum value in a list
 ```
+
+# REMOVE MySQL 
+```bash
+sudo apt remove --purge mysql-server
+sudo apt purge mysql-server
+sudo apt autoremove
+sudo apt autoclean
+sudo apt remove dbconfig-mysql
+```
