@@ -147,6 +147,17 @@ result = '%(s)s hello world %(s)s hello world %(s)s' % {'s': incoming}
 'hello world! abc!   I am  def'
 ```
 
+- Finding the position of element in array
+```python 
+>>> array =[1,2,3,4,5,6]
+>>> array.index(2)
+1
+
+>>> array.index(6)
+5
+``` 
+
+
 - Unpacking Elements
 ```python
 >>> record = ('Dave', 'dave@example.com', '773-555-1212', '847-555-1212')
