@@ -1463,7 +1463,7 @@ Out[198]:
 4  2000      1    5
 ```
 
-- Skip row between header and data¶
+- Skip row between header and data
 ```python
 In [200]: data = """;;;;
    .....:  ;;;;
@@ -1528,4 +1528,40 @@ date
 1990-01-01 04:00:00      17       9      10      11
 1990-01-01 05:00:00      21      11      12      13
 
+```
+- Replace Null as 0 
+```python 
+import pandas as pd
+  
+In [2]: df
+Out[2]: 
+   EPIC  VALID INVALID
+0  OMNI-632 41 5
+1  OMNI-725 13 NaN
+
+In [3]: df["INVALID"].fillna(0, inplace = True)
+Out[3]: 
+   EPIC  VALID INVALID
+0  OMNI-632 41 5
+1  OMNI-725 13 0
+```
+
+- Get column name 
+```python 
+
+import pandas as pd 
+    
+In [2]: df
+Out[2]: 
+   EPIC  VALID INVALID
+0  OMNI-632 41 5
+1  OMNI-725 13 0
+  
+# iterating the columns
+In [3]: for col in df.columns:
+            print(col)
+Out[3]: 
+   EPIC  
+   VALID
+   INVALID
 ```
